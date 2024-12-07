@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Building Management System{% endblock %}
+
+{% block content %}
+    {% if role == 'tenant' %}
+    <h2>Tenant Dashboard</h2>
+    <p>Welcome, Tenant! Here you can manage your appointments.</p>
+    {% endif %}
+
+    {% if role == 'admin' %}
+    <h2>Admin Dashboard</h2>
+    <p>Welcome, Admin! Here you can manage the entire system.</p>
+    {% endif %}
+{% endblock %}
